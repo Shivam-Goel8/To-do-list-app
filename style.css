@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(to top, rgb(247, 69, 69), rgb(0, 0, 107));
+    width: 100%;
+    height: 100vh;
+}
+
+.todo-app {
+    background-color: #fff;
+    width: 600px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 30px;
+    position: relative;
+    top: 20%;
+}
+
+.todo-app img {
+    height: 30px;
+    width: auto;
+    margin-bottom: -10px;
+}
+
+.todo-app h2 {
+    color: rgb(44, 44, 119);
+    font-size: 1.7rem;
+    display: flex;
+}
+
+.row {
+    margin-top: 20px;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    
+
+}
+
+.row input {
+    border: none;
+    outline: none;
+    padding: 20px;
+    width: 80%;
+    background-color: rgb(240, 240, 240);
+    font-size: 1.3rem;
+    width: calc(100% - 120px); /* Adjust based on button width and padding */
+
+    
+}
+
+.row .add {
+    padding: 20px 50px;
+    border: 0;
+    font-size: 1.6rem;
+    cursor: pointer;
+    background-color: red;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+}
+
+.ul_container li {
+    list-style: none;
+    padding: 20px 50px 5px 35px;
+    font-size: 1.2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.ul_container li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(images/unchecked.png);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top: 17px;
+    left: 1px;
+}
+
+.ul_container li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+.ul_container li.checked::before {
+    background-image: url(images/checked.webp);
+}
+
+.ul_container li span{
+    position: absolute;
+    right: 0;
+    font-size: 35px;
+    color: #000;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .todo-app {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 570px) {
+    .todo-app {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .row {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px; /* Add spacing between elements */
+            width: 100%;
+            padding: 10px;
+    }
+    .add{
+        width: 100%;
+        max-width: 200px; /* Ensure it doesn't grow too large */
+        margin: 10px auto;
+    }
+}
+
+
+
+
+
+
